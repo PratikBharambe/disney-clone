@@ -18,18 +18,18 @@ function Slider() {
     }
 
     const sliderRight=(element)=>{
-        element.scrollLeft+=screenWidth-110
+        element.scrollLeft+=screenWidth-120
     }
     const sliderLeft=(element)=>{
-        element.scrollLeft-=screenWidth-110
+        element.scrollLeft-=screenWidth-120
     }
   return (
     <div>
         <HiChevronLeft className="hidden md:block text-white text-[30px] absolute
-        mx-8 mt-[250px] cursor-pointer " 
+        mx-8 mt-[350px] cursor-pointer " 
         onClick={()=>sliderLeft(elementRef.current)}/>
         <HiChevronRight className='hidden md:block text-white text-[30px] absolute
-        mx-8 mt-[250px] cursor-pointer right-0' 
+        mx-8 mt-[350px] cursor-pointer right-0' 
         onClick={()=>sliderRight(elementRef.current)}/>
 
    
@@ -37,7 +37,7 @@ function Slider() {
     scrollbar-none scroll-smooth' ref={elementRef}> 
         {movieList.map((item)=>(
             <img src={IMAGE_BASE_URL+item.backdrop_path} 
-            className='min-w-full  md:h-[490px] object-cover
+            className='min-w-full  md:h-[650px] object-cover
             object-left-top mr-5 rounded-md hover:border-[4px]
             border-gray-400 transition-all duration-100 ease-in'/>
         ))}
